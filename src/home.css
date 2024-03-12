@@ -166,7 +166,7 @@ header {
 .hero-section {
   width: 100%;
   padding: 15rem 0 5rem 0;
-  z-index: 1;
+  z-index: 0;
   position: relative;
 }
 .hero-content {
@@ -181,7 +181,7 @@ header {
   justify-content: flex-start;
   gap: 1rem;
 }
-.hero-cont-left span {
+.hero-cont-left h2 {
   font-size: 4rem;
   font-family: "Lato";
   font-weight: 500;
@@ -1141,10 +1141,56 @@ header {
 .login-content button.appl-btn {
   background-color: var(--black);
 }
+/* MOBILE MENU  */
 .mob-hamburger {
   font-size: 3.5rem;
   color: var(--color-zinc-200);
   display: none;
+}
+.mobile-menu {
+  padding: 2.5rem;
+  background-color: var(--color-slate-900);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 8rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+.mobile-menu-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.mobile-menu-top img {
+  width: 70px;
+  height: auto;
+}
+.mobile-menu-top svg {
+  font-size: 3rem;
+  color: var(--white);
+}
+.mobile-menu-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 3rem;
+  width: 100%;
+  position: relative;
+  z-index: 1000;
+}
+.mobile-menu-bottom a {
+  font-size: 2.2rem;
+  color: var(--white);
+  font-weight: 400;
+  margin: 0;
 }
 /* RESPONSIVENESS  */
 @media only screen and (max-width: 1350px) {
@@ -1160,7 +1206,7 @@ header {
   .hero-cont-left h1 {
     font-size: 3rem;
   }
-  .hero-cont-left span {
+  .hero-cont-left h2 {
     font-size: 3.5rem;
   }
   .hb-content p {
@@ -1203,7 +1249,7 @@ header {
   .hero-cont-left h1 {
     font-size: 2.5rem;
   }
-  .hero-cont-left span {
+  .hero-cont-left h2 {
     font-size: 3rem;
   }
   .price-cont h3 {
@@ -1317,5 +1363,195 @@ header {
   }
   .video-content {
     padding: 5rem;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .box {
+    padding: 0 2.5rem;
+  }
+  header {
+    padding: 2.5rem 0;
+  }
+  .hero-cont-right img {
+    width: 100%;
+  }
+  .cm-1 {
+    top: 10%;
+    left: -60%;
+    width: 450px;
+  }
+  .hero-cont-left h1 {
+    font-size: 2.25rem;
+  }
+  .hero-cont-left h2 {
+    font-size: 2.5rem;
+  }
+  .hero-cont-left p {
+    font-size: 1.65rem;
+  }
+  .wave-bg-img {
+    height: 90% !important;
+  }
+  .cm-2 {
+    display: none;
+  }
+  .feature-grid.fg-2 img {
+    width: 100%;
+  }
+  .feature-grid img {
+    width: 100%;
+  }
+  .hero-bottom {
+    padding: 0 0 5rem 0;
+  }
+  .features-section {
+    margin: 8rem auto;
+  }
+  .hero-bottom-box {
+    grid-gap: 2.5rem 0;
+  }
+  .feature-content h4 {
+    font-size: 2.5rem;
+  }
+  .feature-content {
+    gap: 1.75rem;
+  }
+  .feature-content p {
+    font-size: 1.65rem;
+  }
+  .video-content {
+    padding: 2.5rem;
+  }
+  .video-section {
+    margin: 0 0 8rem 0;
+  }
+  .about-us {
+    padding: 8rem 0;
+  }
+  .aboutus-content h3 {
+    font-size: 2.5rem;
+  }
+  .aboutus-profile img {
+    width: 80px;
+  }
+  .aboutus-profile {
+    gap: 2rem;
+  }
+  .aup-text h4 {
+    font-size: 2rem;
+  }
+  .aup-text h4 a svg {
+    width: 25px;
+  }
+  .aup-text h6 {
+    font-size: 1.5rem;
+  }
+  .aboutus-content p {
+    font-size: 1.65rem;
+  }
+  .aboutus-content {
+    gap: 3rem;
+  }
+  .price-section {
+    padding: 8rem 0;
+  }
+  .price-cont h3 {
+    font-size: 2.5rem;
+  }
+  .price-cont p {
+    font-size: 1.5rem;
+    width: 100%;
+  }
+  .price-grid {
+    grid-template-columns: 1fr;
+    padding-top: 8rem;
+    z-index: 5;
+  }
+  .price-g-left {
+    align-items: center;
+    gap: 3.5rem;
+  }
+  .price-g-right {
+    margin-top: 8rem;
+  }
+  .pgl-top,
+  .pgl-bottom {
+    align-items: center;
+  }
+  .price-cont p {
+    text-align: center;
+  }
+  .pgr-box {
+    padding: 6rem 2rem 3rem 2rem;
+    gap: 2.5rem;
+  }
+  .pgr-box div h6 {
+    font-size: 1.45rem;
+  }
+  .swiper-head h2 {
+    font-size: 2.35rem;
+  }
+  .team-section {
+    padding: 8rem 0;
+  }
+  .sh-right {
+    gap: 1.5rem;
+  }
+  .sh-right svg {
+    font-size: 2rem;
+  }
+  .ts-line {
+    display: none;
+  }
+  .team-card p {
+    font-size: 1.65rem;
+  }
+  .swiper-head {
+    margin: 0 0 3.5rem 0;
+  }
+  .team-card {
+    gap: 1.5rem;
+    padding: 2rem;
+  }
+  .cm-4 {
+    display: none;
+  }
+  .faq-section {
+    padding: 8rem 0;
+  }
+  .faq-content h3 {
+    font-size: 2.5rem;
+  }
+  .faq-accordian-box {
+    padding-top: 3.5rem;
+    max-width: 100%;
+    margin: 0 auto 5rem auto;
+  }
+  .faq-accordian-box .accordion-body {
+    padding: 1.5rem 0 0 0;
+    font-size: 1.65rem;
+  }
+  .faq-accordian-box .accordion-header h5 {
+    font-size: 1.65rem;
+  }
+  .faq-accordian-box .accordion-item {
+    padding: 1.75rem;
+    border-radius: 0.5rem;
+  }
+  .faq-accordian-box .accordion-header .accordion-button {
+    gap: 1rem;
+  }
+  .faq-content h6 {
+    font-size: 1.65rem;
+    margin-bottom: 5rem;
+    text-align: center;
+  }
+  .footer-line,
+  .cm-5 {
+    display: none;
+  }
+  .faq-content img {
+    width: 80px;
   }
 }

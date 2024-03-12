@@ -28,6 +28,7 @@ import {
   BsFillStarFill,
   BsChevronDown,
   BsList,
+  BsXLg,
 } from "react-icons/bs";
 
 import Accordion from "react-bootstrap/Accordion";
@@ -35,6 +36,15 @@ import { Link, Route, Switch } from "react-router-dom";
 
 function Home(props) {
   const [isActive, setIsActive] = useState("");
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false);
+  };
+
   return (
     <div className="homepage">
       <main className="homepage" id="home_page">
@@ -63,7 +73,25 @@ function Home(props) {
                   <Link to="#">FAQs</Link>
                   <Link to="#">Contact</Link>
                 </div>
-                <BsList className="mob-hamburger" />
+                <BsList className="mob-hamburger" onClick={toggleMobileMenu} />
+                {isMobileMenuOpen && (
+                  <div className="mobile-menu">
+                    <div className="mobile-menu-top">
+                      <Link to="/">
+                        <img src={Logo} alt="" />
+                      </Link>
+                      <BsXLg onClick={closeMobileMenu} />
+                    </div>
+                    <div className="mobile-menu-bottom">
+                      <Link to="#">Features</Link>
+                      <Link to="#">Instructor</Link>
+                      <Link to="#">Pricing</Link>
+                      <Link to="#">Testimonials</Link>
+                      <Link to="#">FAQs</Link>
+                      <Link to="#">Contact</Link>
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
           </header>
@@ -72,10 +100,10 @@ function Home(props) {
               <div className="hero-content">
                 <div className="hero-cont-left">
                   <h1 className="gradient-text">Recurofy</h1>
-                  <span>
+                  <h2>
                     Learn Recursion & Dynamic Programming in The Most Effecient
                     Way
-                  </span>
+                  </h2>
                   <p>
                     Unlock the Power of Recursive Thinking with Recurofy: Your
                     Ultimate Guide to Mastering Fractals, Recursion, and Dynamic
@@ -335,7 +363,7 @@ function Home(props) {
             </div>
             <Swiper
               spaceBetween={15}
-              slidesPerView={1.5}
+              slidesPerView={1.25}
               modules={[Navigation]}
               navigation={{
                 nextEl: ".team-next",
