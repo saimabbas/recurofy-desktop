@@ -78,7 +78,11 @@ function Home(props) {
                     complex concepts, equipping you with the skills to excel in
                     advanced programming techniques.
                   </p>
-                  <button className="gradient-btn">Purchase Now ($9.99)</button>
+                  <Link to="#">
+                    <button className="gradient-btn">
+                      Purchase Now ($9.99)
+                    </button>
+                  </Link>
                 </div>
                 <div className="hero-cont-right">
                   <img src={HeroImg} alt="" />
