@@ -27,6 +27,7 @@ import {
   BsChevronLeft,
   BsFillStarFill,
   BsChevronDown,
+  BsList,
 } from "react-icons/bs";
 
 import Accordion from "react-bootstrap/Accordion";
@@ -43,7 +44,10 @@ function Home(props) {
           <header>
             <div className="box">
               <div className="header_cont">
-                <img src={Logo} alt="" />
+                <Link to="#">
+                  {" "}
+                  <img src={Logo} alt="" />
+                </Link>
                 <div className="header_right">
                   <Link
                     to="#"
@@ -59,6 +63,7 @@ function Home(props) {
                   <Link to="#">FAQs</Link>
                   <Link to="#">Contact</Link>
                 </div>
+                <BsList className="mob-hamburger" />
               </div>
             </div>
           </header>
@@ -206,34 +211,36 @@ function Home(props) {
                 <div className="aup-text">
                   <h4>
                     Joseph Mipatchen{" "}
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="35"
-                      height="36"
-                      viewBox="0 0 35 36"
-                      fill="none"
-                    >
-                      <g clip-path="url(#clip0_576_410)">
-                        <path
-                          d="M17.5 35.5C27.165 35.5 35 27.665 35 18C35 8.33502 27.165 0.5 17.5 0.5C7.83502 0.5 0 8.33502 0 18C0 27.665 7.83502 35.5 17.5 35.5Z"
-                          fill="#007AB9"
-                        />
-                        <path
-                          d="M27.956 19.4082V26.623H23.773V19.8917C23.773 18.2015 23.169 17.0473 21.6545 17.0473C20.4987 17.0473 19.8121 17.8244 19.5089 18.5768C19.3987 18.8457 19.3704 19.2191 19.3704 19.5963V26.6227H15.187C15.187 26.6227 15.2432 15.222 15.187 14.0419H19.3707V15.8247C19.3622 15.8388 19.3504 15.8525 19.3429 15.8659H19.3707V15.8247C19.9266 14.9694 20.918 13.7465 23.1406 13.7465C25.8927 13.7465 27.956 15.5446 27.956 19.4082ZM10.811 7.97754C9.38002 7.97754 8.44385 8.91683 8.44385 10.1509C8.44385 11.3588 9.35288 12.3252 10.7561 12.3252H10.7832C12.2422 12.3252 13.1494 11.3588 13.1494 10.1509C13.1216 8.91683 12.2422 7.97754 10.811 7.97754ZM8.69247 26.623H12.8742V14.0419H8.69247V26.623Z"
-                          fill="#F1F2F2"
-                        />
-                      </g>
-                      <defs>
-                        <clipPath id="clip0_576_410">
-                          <rect
-                            width="35"
-                            height="35"
-                            fill="white"
-                            transform="translate(0 0.5)"
+                    <Link to="#">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="35"
+                        height="36"
+                        viewBox="0 0 35 36"
+                        fill="none"
+                      >
+                        <g clip-path="url(#clip0_576_410)">
+                          <path
+                            d="M17.5 35.5C27.165 35.5 35 27.665 35 18C35 8.33502 27.165 0.5 17.5 0.5C7.83502 0.5 0 8.33502 0 18C0 27.665 7.83502 35.5 17.5 35.5Z"
+                            fill="#007AB9"
                           />
-                        </clipPath>
-                      </defs>
-                    </svg>
+                          <path
+                            d="M27.956 19.4082V26.623H23.773V19.8917C23.773 18.2015 23.169 17.0473 21.6545 17.0473C20.4987 17.0473 19.8121 17.8244 19.5089 18.5768C19.3987 18.8457 19.3704 19.2191 19.3704 19.5963V26.6227H15.187C15.187 26.6227 15.2432 15.222 15.187 14.0419H19.3707V15.8247C19.3622 15.8388 19.3504 15.8525 19.3429 15.8659H19.3707V15.8247C19.9266 14.9694 20.918 13.7465 23.1406 13.7465C25.8927 13.7465 27.956 15.5446 27.956 19.4082ZM10.811 7.97754C9.38002 7.97754 8.44385 8.91683 8.44385 10.1509C8.44385 11.3588 9.35288 12.3252 10.7561 12.3252H10.7832C12.2422 12.3252 13.1494 11.3588 13.1494 10.1509C13.1216 8.91683 12.2422 7.97754 10.811 7.97754ZM8.69247 26.623H12.8742V14.0419H8.69247V26.623Z"
+                            fill="#F1F2F2"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_576_410">
+                            <rect
+                              width="35"
+                              height="35"
+                              fill="white"
+                              transform="translate(0 0.5)"
+                            />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                    </Link>
                   </h4>
                   <h6>Software Engineer at Amazon</h6>
                 </div>
@@ -274,7 +281,11 @@ function Home(props) {
                     </div>
                     <h6>*One Time Payment</h6>
                   </div>
-                  <button className="gradient-btn">Purchase Now ($9.99)</button>
+                  <Link to="#">
+                    <button className="gradient-btn">
+                      Purchase Now ($9.99)
+                    </button>
+                  </Link>
                 </div>
                 <div className="price-g-right">
                   <img src={CostLogo} alt="" className="pgr-img" />
@@ -335,7 +346,7 @@ function Home(props) {
                   slidesPerView: 1.5,
                   spaceBetween: 25,
                 },
-                1000: {
+                1100: {
                   slidesPerView: 3.15,
                 },
               }}
@@ -617,9 +628,11 @@ function Home(props) {
               </div>
               <h6>
                 <span className="gradient-text">Still need help?</span> Contact
-                us at <a href="#">help@recurofy.com</a>
+                us at <Link to="#">help@recurofy.com</Link>
               </h6>
-              <img src={FooterLogo} alt="" />
+              <Link to="#">
+                <img src={FooterLogo} alt="" />
+              </Link>
             </div>
           </div>
         </section>
