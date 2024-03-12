@@ -363,7 +363,7 @@ function Home(props) {
             </div>
             <Swiper
               spaceBetween={15}
-              slidesPerView={1.25}
+              slidesPerView={1.05}
               modules={[Navigation]}
               navigation={{
                 nextEl: ".team-next",

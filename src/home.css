@@ -237,7 +237,7 @@ header {
 .hb-content {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   width: 100%;
   border-right: 1px solid var(--color-slate-600);
@@ -1269,7 +1269,10 @@ header {
     padding: 2rem;
   }
   .hb-content p {
-    font-size: 1.45rem;
+    font-size: 1.35rem;
+  }
+  .hb-content h6 {
+    font-size: 3rem;
   }
   .price-cont p {
     font-size: 1.65rem;
@@ -1553,5 +1556,15 @@ header {
   }
   .faq-content img {
     width: 80px;
+  }
+  .hb-content p {
+    font-size: 1.35rem;
+    white-space: nowrap;
+  }
+  .hb-content h6 {
+    font-size: 3rem;
+  }
+  .hb-content:nth-child(3) {
+    padding-left: 0;
   }
 }
