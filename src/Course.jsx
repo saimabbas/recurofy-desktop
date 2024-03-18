@@ -235,18 +235,6 @@ export const Course = () => {
             </div>
           </div>
         </section>
-        <div className="login-popup">
-          <div className="login-content">
-            <img src={LightLogo} alt="" />
-            <h5>Login to Recurofy</h5>
-            <p>You need to login before you can purchase Recurofy course</p>
-            <div className="lc-btn-box">
-              <button className="face-btn">Sign In with Facebook</button>
-              <button className="goog-btn">Sign In with Google</button>
-              <button className="appl-btn">Sign In with Apple</button>
-            </div>
-          </div>
-        </div>
       </main>
     </div>
   );
