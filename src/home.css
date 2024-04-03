@@ -797,7 +797,7 @@ header {
 /* COURSE PAGE  */
 .course-section {
   width: 100%;
-  padding: 5rem 0 0 0;
+  padding: 3.5rem 0;
   background-color: var(--color-slate-100);
 }
 .course-grid {
@@ -882,6 +882,7 @@ header {
   flex-direction: column;
   gap: 2.5rem;
   width: 100%;
+  height: 100%;
 }
 .lesson-timeline-box {
   display: flex;
@@ -892,6 +893,9 @@ header {
   width: 100%;
   padding-bottom: 2rem;
   border-bottom: 1px solid var(--color-slate-200);
+}
+.lesson-timeline-box:last-child {
+  border-bottom: unset;
 }
 .lt-top {
   display: flex;
@@ -909,6 +913,9 @@ header {
 .lt-top-left svg {
   color: var(--color-slate-300);
   font-size: 2rem;
+}
+.lt-top-checkbox {
+  color: #10b981 !important;
 }
 .lt-top-left h6 {
   color: var(--color-slate-600);
@@ -938,14 +945,27 @@ header {
   cursor: pointer;
 }
 .lt-bottom {
-  width: 95%;
-  margin: 0.5rem 0 0 auto;
+  width: 100%;
+  padding: 1.25rem;
+  background-color: var(--color-slate-50);
+  border-radius: 0.75rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
   gap: 1.5rem;
+  position: relative;
 }
+/* .lt-bottom::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  border-left: 1px dotted var(--color-slate-400);
+  background: var(--color-dark-primary);
+} */
 .lt-bottom-left {
   display: flex;
   justify-content: flex-start;

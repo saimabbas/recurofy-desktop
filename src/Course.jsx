@@ -48,7 +48,7 @@ export const Course = () => {
                   <div className="lesson-timeline-box">
                     <div className="lt-top">
                       <div className="lt-top-left">
-                        <BsCircle />
+                        <BsCheckCircleFill className="lt-top-checkbox" />
                         <h6>C1. Recursion Basics</h6>
                       </div>
                       <div className="tl-top-right">
@@ -90,7 +90,7 @@ export const Course = () => {
                   <div className="lesson-timeline-box">
                     <div className="lt-top">
                       <div className="lt-top-left">
-                        <BsCircle />
+                        <BsCheckCircleFill className="lt-top-checkbox" />
                         <h6>C2. Self-Similar Algorithms</h6>
                       </div>
                       <div className="tl-top-right">

@@ -98,8 +98,9 @@ function Home(props) {
                   </Link>
                   <Link to="#">Testimonials</Link>
                   <Link to="#">FAQs</Link>
+                  <Link to="#">Contact</Link>
                   <Link to="#" onClick={togglePopUp}>
-                    Contact
+                    Login
                   </Link>
                 </div>
                 <BsList className="mob-hamburger" onClick={toggleMobileMenu} />
@@ -118,6 +119,7 @@ function Home(props) {
                       <Link to="#">Testimonials</Link>
                       <Link to="#">FAQs</Link>
                       <Link to="#">Contact</Link>
+                      <Link to="#">Login</Link>
                     </div>
                   </div>
                 )}
