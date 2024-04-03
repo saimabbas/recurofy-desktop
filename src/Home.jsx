@@ -140,7 +140,7 @@ function Home(props) {
                     complex concepts, equipping you with the skills to excel in
                     advanced programming techniques.
                   </p>
-                  <Link to="#">
+                  <Link to="/course">
                     <button className="gradient-btn">
                       Purchase Now ($9.99)
                     </button>
